@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\LoginController;
 
+use App\Http\Controllers\RegistrationController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,4 +22,7 @@ Route::get('/', function () {
 });
 
 Route::get('/login', [LoginController::class, 'index'])->name('bdhLogin.Inđex');
-Route::get('/login-submit', [LoginController::class, 'loginSubmit'])->name('login.submit');
+Route::post('/login-submit', [LoginController::class, 'loginSubmit'])->name('login.submit');
+
+Route::get('/register', [RegistrationController::class, 'showForm'])->name('register.form');
+Route::post('/register', [RegistrationController::class, 'submitForm'])->name('register.submit');
