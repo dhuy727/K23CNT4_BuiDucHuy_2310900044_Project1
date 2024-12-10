@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\BdhKhoaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+#Khoa
+Route::get('/khoas',[BdhKhoaController::class,'bdhGetAllKhoa'])->name('bdhkhoa.bdhgetallkhoa');

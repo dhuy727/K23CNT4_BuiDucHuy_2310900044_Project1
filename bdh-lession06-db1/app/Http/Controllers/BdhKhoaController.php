@@ -11,6 +11,8 @@ class BdhKhoaController extends Controller
     public function bdhGetAllKhoa()
     {
         //truy vấn đọc dữ liệu từ bảng khoa
-        $bdhKhoa = DB::select("Select * from bdhkhoa");
+        $bdhKhoas = DB::select("Select * from bdhkhoa");
+        //chuyển dữ liệu lên view để hiển thị
+        return view('/bdhkhoa.bdhList',['bdhKhoas' => $bdhKhoas]);
     }
 }
