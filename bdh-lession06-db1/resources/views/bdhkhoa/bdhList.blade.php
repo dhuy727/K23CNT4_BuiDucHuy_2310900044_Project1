@@ -31,11 +31,17 @@
                         <td>{{$item->BDHMAKH}}</td>
                         <td>{{$item->BDHTENKH}}</td>
                         <td>
-                            edit / delete
+                            <a href="/khoas/detail/{{$item->BDHMAKH}}" class="btn btn-success">
+                                Chi tiết</a>
+                            <a href="/khoas/edit/{{$item->BDHMAKH}}" class="btn btn-primary">
+                                Sửa</a>
+                            <a href="/khoa/delete/{{$item->BDHMAKH}}" class="btn btn-danger"
+                                onclick="return confirm('Bạn muốn xóa không?');">
+                                 Xóa </a>
                         </td>
                     </tr>
                 @endforeach
-                </tbody>
+            </tbody>
         </table>
     </section>
 </body>

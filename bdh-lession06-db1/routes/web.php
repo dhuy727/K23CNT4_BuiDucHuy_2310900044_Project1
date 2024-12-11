@@ -19,3 +19,10 @@ Route::get('/', function () {
 
 #Khoa
 Route::get('/khoas',[BdhKhoaController::class,'bdhGetAllKhoa'])->name('bdhkhoa.bdhgetallkhoa');
+#Khoa detail
+Route::get('/khoas/detail/{makh}',[BdhKhoaController::class,'bdhGetKhoa'])->name('bdhkhoa.bdhgetkhoa');
+#khoa edit
+Route::get('/khoas/edit/{makh}',[BdhKhoaController::class,'bdhEdit'])->name('bdhkhoa.bdhEdit');
+Route::post('/khoas/edit',[BdhKhoaController::class,'bdhEditSubmit'])->name('bdhkhoa.bdhEditSubmit');
+#xóa
+Route::get('/khoas/delete/{makh}',[BdhKhoaController::class,'bdhDelete'])->name('dbhkhoa.bdhDelete');
