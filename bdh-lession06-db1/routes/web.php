@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BdhKhoaController;
+use App\Http\Controllers\BdhMonHocController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,5 +25,11 @@ Route::get('/khoas/detail/{makh}',[BdhKhoaController::class,'bdhGetKhoa'])->name
 #khoa edit
 Route::get('/khoas/edit/{makh}',[BdhKhoaController::class,'bdhEdit'])->name('bdhkhoa.bdhEdit');
 Route::post('/khoas/edit',[BdhKhoaController::class,'bdhEditSubmit'])->name('bdhkhoa.bdhEditSubmit');
-#xóa
+#khoa insert
+Route::get('/khoas/insert',[BdhKhoaController::class,'bhdInsert'])->name('bdhkhoa.bhdInsert');
+Route::post('/khoas/insert',[BdhKhoaController::class,'bdhInsertSubmit'])->name('bdhkhoa.bdhInsertSubmit');
+#khoa - delete
 Route::get('/khoas/delete/{makh}',[BdhKhoaController::class,'bdhDelete'])->name('dbhkhoa.bdhDelete');
+
+#Monhoc
+Route::get('/monhocs',[BdhMonHocController::class,'bdhList'])->name('bdhmonhoc.bdhList');
