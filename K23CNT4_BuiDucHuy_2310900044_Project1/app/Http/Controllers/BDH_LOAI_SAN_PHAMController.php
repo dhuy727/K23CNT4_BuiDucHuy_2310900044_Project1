@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Http\RedirectResponde;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
+use App\Models\BDH_LOAI_SAN_PHAM;
 class BDH_LOAI_SAN_PHAMController extends Controller
 {
     //admin CRUD
@@ -45,10 +46,20 @@ class BDH_LOAI_SAN_PHAMController extends Controller
     //edit - submit
     public function bdhEditSubmit(request $request)
     {
-        $maloai = $request->bdhMaLoai;
-        $tenloai = $request->bdhTenLoai;
-        DB::update("UPDATE bdh_loai_san_pham set bdhTenLoai = ? where bdhMaLoai = ?",[$maloai,$tenloai]);
-        return redirect('/bdh-admins/bdh-loai-san-pham');
-    }
+        $bdhLoaiSanPham = BDH_LOAI_SAN_PHAM::find($request->id);
+        $bdhLoaiSanPham->bdhMaLoai = $request->bdhMaLoai;
+        $bdhLoaiSanPham->bdhTenLoai = $request->bdhTenLoai;
+        $bdhLoaiSanPham->bdhTrangThai = $request->bdhTrangThai;
 
+        $bdhLoaiSanPham->save();
+
+        return redirect()->route('bdhadmins.bdhloaisanpham');
+    }
+    // get xóa
+    public function bdhDelete($id)
+    {
+        $bdhLoaiSanPham = BDH_LOAI_SAN_PHAM::find($id);
+        $bdhLoaiSanPham->delete();
+        return redirect()->route('bdhadmins.bdhloaisanpham');
+    }
 }
