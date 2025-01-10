@@ -23,17 +23,54 @@ class BDH_SAN_PHAMController extends Controller
     {
         //ghi dữ liệu xuống db
 
-        $bdhLoaiSanPham = new BDH_SAN_PHAM;
-        $bdhLoaiSanPham->bdhMaSanPham = $request->bdhMaSanPham;
-        $bdhLoaiSanPham->bdhTenSanPham = $request->bdhTenSanPham;
-        $bdhLoaiSanPham->bdhHinhAnh = $request->bdhHinhAnh;
-        $bdhLoaiSanPham->bdhSoLuong = $request->bdhSoLuong;
-        $bdhLoaiSanPham->bdhDonGia = $request->bdhDonGia;
-        $bdhLoaiSanPham->bdhMaLoai = $request->bdhMaLoai;
-        $bdhLoaiSanPham->bdhTrangThai = $request->bdhTrangThai;
+        $bdhSanPham = new BDH_SAN_PHAM;
+        $bdhSanPham->bdhMaSanPham = $request->bdhMaSanPham;
+        $bdhSanPham->bdhTenSanPham = $request->bdhTenSanPham;
+        $bdhSanPham->bdhHinhAnh = $request->bdhHinhAnh;
+        $bdhSanPham->bdhSoLuong = $request->bdhSoLuong;
+        $bdhSanPham->bdhDonGia = $request->bdhDonGia;
+        $bdhSanPham->bdhMaLoai = $request->bdhMaLoai;
+        $bdhSanPham->bdhTrangThai = $request->bdhTrangThai;
         
-        $bdhLoaiSanPham->save();
+        $bdhSanPham->save();
 
         return redirect()->route('bdhadmins.bdhsanpham');
+    }
+
+    //edit
+    public function bdhEdit($id)
+    {
+        $bdhSanPham = BDH_SAN_PHAM::find($id);
+        return view('bdhAdmins.bdhSanPham.bdh-edit',['bdhSanPham'=>$bdhSanPham]);
+    }
+    public function bdhEditSubmit(request $request)
+    {
+        $bdhSanPham = BDH_SAN_PHAM::find($request->id);
+        $bdhSanPham->bdhMaSanPham = $request->bdhMaSanPham;
+        $bdhSanPham->bdhTenSanPham = $request->bdhTenSanPham;
+        $bdhSanPham->bdhHinhAnh = $request->bdhHinhAnh;
+        $bdhSanPham->bdhSoLuong = $request->bdhSoLuong;
+        $bdhSanPham->bdhDonGia = $request->bdhDonGia;
+        $bdhSanPham->bdhMaLoai = $request->bdhMaLoai;
+        $bdhSanPham->bdhTrangThai = $request->bdhTrangThai;
+
+        $bdhSanPham->save();
+
+        return redirect()->route('bdhadmins.bdhsanpham');
+    }
+
+    // get xóa
+    public function bdhDelete($id)
+    {
+        $bdhSanPham = BDH_SAN_PHAM::find($id);
+        $bdhSanPham->delete();
+        return redirect()->route('bdhadmins.bdhsanpham');
+    }
+
+    //detail
+    public function bdhDetail($id)
+    {
+        $bdhsanpham = BDH_SAN_PHAM::find($id);
+        return view('bdhAdmins.bdhsanpham.bdh-detail', ['bdhsanpham' => $bdhsanpham]);
     }
 }

@@ -11,5 +11,10 @@
     <li class="list-group-item">
         <a href="/bdh-admins/bdh-san-pham">Sản phẩm</a>
     </li>
-    <li class="list-group-item">And a fifth one</li>
+    <li class="list-group-item">
+        <a href="/bdh-admins/bdh-khach-hang">Khách hàng</a>
+    </li>
+    <li class="list-group-item">
+        <a href="/bdh-admins/bdh-hoa-don">Hóa đơn</a>
+    </li>
   </ul>

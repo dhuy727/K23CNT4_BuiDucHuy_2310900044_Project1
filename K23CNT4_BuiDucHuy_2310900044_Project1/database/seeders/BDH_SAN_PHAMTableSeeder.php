@@ -14,76 +14,86 @@ class BDH_SAN_PHAMTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('BDH_SAN_PHAM')->insert([
-            'bdhMaSanPham' => 'VP001',
-            'bdhTenSanPham' => 'Cây phú quý',
-            'bdhHinhAnh' => 'images/san-pham/VP001.jpg',
-            'bdhSoLuong' => 100,
-            'bdhDonGia' => 699000,
-            'bdhMaLoai' => 1,
-            'bdhTrangThai' => 0
-        ]);
-        DB::table('BDH_SAN_PHAM')->insert([
-            'bdhMaSanPham' => 'VP002',
-            'bdhTenSanPham' => 'Cây đại phú gia',
-            'bdhHinhAnh' => 'images/san-pham/VP002.jpg',
-            'bdhSoLuong' => 200,
-            'bdhDonGia' => 550000,
-            'bdhMaLoai' => 1,
-            'bdhTrangThai' => 0
-        ]);
-        DB::table('BDH_SAN_PHAM')->insert([
-            'bdhMaSanPham' => 'VP003',
-            'bdhTenSanPham' => 'Cây hạnh phúc',
-            'bdhHinhAnh' => 'images/san-pham/VP003.jpg',
-            'bdhSoLuong' => 150,
-            'bdhDonGia' => 250000,
-            'bdhMaLoai' => 1,
-            'bdhTrangThai' => 0
-        ]);
-        DB::table('BDH_SAN_PHAM')->insert([
-            'bdhMaSanPham' => 'VP004',
-            'bdhTenSanPham' => 'Cây vạn lộc',
-            'bdhHinhAnh' => 'images/san-pham/VP004.jpg',
-            'bdhSoLuong' => 300,
-            'bdhDonGia' => 799000,
-            'bdhMaLoai' => 1,
-            'bdhTrangThai' => 0
-        ]);
-        DB::table('BDH_SAN_PHAM')->insert([
-            'bdhMaSanPham' => 'PT001',
-            'bdhTenSanPham' => 'Cây thiết mộc lan',
-            'bdhHinhAnh' => 'images/san-pham/PT001.jpg',
-            'bdhSoLuong' => 150,
-            'bdhDonGia' => 590000,
-            'bdhMaLoai' => 3,
-            'bdhTrangThai' => 0
-        ]);
-        DB::table('BDH_SAN_PHAM')->insert([
-            'bdhMaSanPham' => 'PT002',
-            'bdhTenSanPham' => 'Cây trường sinh',
-            'bdhHinhAnh' => 'images/san-pham/PT002.jpg',
-            'bdhSoLuong' => 100,
-            'bdhDonGia' => 150000,
-            'bdhMaLoai' => 3,
-            'bdhTrangThai' => 0
-        ]);
-        DB::table('BDH_SAN_PHAM')->insert([
-            'bdhMaSanPham' => 'PT003',
-            'bdhTenSanPham' => 'Cây hạnh phúc',
-            'bdhHinhAnh' => 'images/san-pham/PT003.jpg',
-            'bdhSoLuong' => 200,
-            'bdhDonGia' => 299000,
-            'bdhMaLoai' => 3,
-            'bdhTrangThai' => 0
-        ]);
-        DB::table('BDH_SAN_PHAM')->insert([
-            'bdhMaSanPham' => 'PT004',
-            'bdhTenSanPham' => 'Cây hoa nhài',
-            'bdhHinhAnh' => 'images/san-pham/PT004.jpg',
-            'bdhSoLuong' => 300,
-            'bdhDonGia' => 199000,
-            'bdhMaLoai' => 3,
-            'bdhTrangThai' => 0
+            [
+                'bdhMaSanPham' => 'SP001',
+                'bdhTenSanPham' => 'Chuột Logitech G502',
+                'bdhSoLuong' => 20,
+                'bdhDonGia' => 1250000,
+                'bdhMaLoai' => 'L001',
+                'bdhTrangThai' => 1,
+            ],
+            [
+                'bdhMaSanPham' => 'SP002',
+                'bdhTenSanPham' => 'Chuột Razer DeathAdder V2',
+                'bdhSoLuong' => 15,
+                'bdhDonGia' => 1499000,
+                'bdhMaLoai' => 'L001',
+                'bdhTrangThai' => 0,
+            ],
+            [
+                'bdhMaSanPham' => 'SP003',
+                'bdhTenSanPham' => 'Bàn phím cơ Razer BlackWidow',
+                'bdhSoLuong' => 10,
+                'bdhDonGia' => 2599000,
+                'bdhMaLoai' => 'L002',
+                'bdhTrangThai' => 1,
+            ],
+            [
+                'bdhMaSanPham' => 'SP004',
+                'bdhTenSanPham' => 'Bàn phím Logitech K120',
+                'bdhSoLuong' => 30,
+                'bdhDonGia' => 499000,
+                'bdhMaLoai' => 'L002',
+                'bdhTrangThai' => 1,
+            ],
+            [
+                'bdhMaSanPham' => 'SP005',
+                'bdhTenSanPham' => 'Tai nghe HyperX Cloud II',
+                'bdhSoLuong' => 25,
+                'bdhDonGia' => 2499000,
+                'bdhMaLoai' => 'L003',
+                'bdhTrangThai' => 0,
+            ],
+            [
+                'bdhMaSanPham' => 'SP006',
+                'bdhTenSanPham' => 'Màn hình Dell UltraSharp',
+                'bdhSoLuong' => 5,
+                'bdhDonGia' => 7699000,
+                'bdhMaLoai' => 'L004',
+                'bdhTrangThai' => 1,
+            ],
+            [
+                'bdhMaSanPham' => 'SP007',
+                'bdhTenSanPham' => 'Chuột Microsoft Basic Optical',
+                'bdhSoLuong' => 50,
+                'bdhDonGia' => 2999000,
+                'bdhMaLoai' => 'L001',
+                'bdhTrangThai' => 1,
+            ],
+            [
+                'bdhMaSanPham' => 'SP008',
+                'bdhTenSanPham' => 'Bàn phím cơ Corsair K95',
+                'bdhSoLuong' => 8,
+                'bdhDonGia' => 4599000,
+                'bdhMaLoai' => 'L002',
+                'bdhTrangThai' => 0,
+            ],
+            [
+                'bdhMaSanPham' => 'SP009',
+                'bdhTenSanPham' => 'Tai nghe SteelSeries Arctis 7',
+                'bdhSoLuong' => 12,
+                'bdhDonGia' => 4399000,
+                'bdhMaLoai' => 'L003',
+                'bdhTrangThai' => 1,
+            ],
+            [
+                'bdhMaSanPham' => 'SP010',
+                'bdhTenSanPham' => 'Màn hình Samsung Odyssey G7',
+                'bdhSoLuong' => 7,
+                'bdhDonGia' => 13999000,
+                'bdhMaLoai' => 'L003',
+                'bdhTrangThai' => 1,
+            ],
         ]);
     }
 }

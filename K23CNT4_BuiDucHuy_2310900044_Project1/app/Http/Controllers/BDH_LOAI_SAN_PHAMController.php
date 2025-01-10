@@ -62,4 +62,10 @@ class BDH_LOAI_SAN_PHAMController extends Controller
         $bdhLoaiSanPham->delete();
         return redirect()->route('bdhadmins.bdhloaisanpham');
     }
+    //detail
+    public function bdhDetail($id)
+    {
+        $bdhloaisanpham = BDH_LOAI_SAN_PHAM::where('id', $id)->first();
+        return view('bdhAdmins.bdhloaisanpham.bdh-detail',['bdhloaisanpham'=>$bdhloaisanpham]);
+    }
 }

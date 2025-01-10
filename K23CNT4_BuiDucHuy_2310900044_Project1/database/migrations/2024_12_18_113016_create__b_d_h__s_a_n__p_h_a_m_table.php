@@ -15,10 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('bdhMaSanPham',255)->unique();
             $table->string('bdhTenSanPham',255);
-            $table->string('bdhHinhAnh',255);
             $table->integer('bdhSoLuong');
-            $table->float('bdhDonGia');
-            $table->bigInteger('bdhMaLoai')->references('id')->on('BDH_LOAI_SAN_PHAM');
+            $table->bigInteger('bdhDonGia');
+            $table->string('bdhMaLoai')->references('id')->on('BDH_LOAI_SAN_PHAM');
             $table->tinyInteger('bdhTrangThai');
             $table->timestamps();
         });

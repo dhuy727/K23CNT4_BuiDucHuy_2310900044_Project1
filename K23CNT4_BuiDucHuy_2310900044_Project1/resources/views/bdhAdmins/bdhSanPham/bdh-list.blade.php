@@ -41,12 +41,15 @@
                             <td>{{$item->bdhMaLoai}}</td>
                             <td>{{$item->bdhTrangThai}}</td>
                             <td>
-                                view / edit / delete
+                                <a href="/bdh-admins/bdh-san-pham/bdh-detail/{{$item->id}}">View</a>
+                                <a href="/bdh-admins/bdh-san-pham/bdh-edit/{{$item->id}}">Edit</a>   
+                                <a href="/bdh-admins/bdh-san-pham/bdh-delete/{{$item->id}}" 
+                                onclick="return confirm('Bạn có chắc chắn xóa không')">Delete</a>
                             </td>
                         </tr>
                     @empty
                         <tr>
-                            <th colspan="5">Chưa có thông tin loại sản phẩm</th>
+                            <th colspan="9">Chưa có thông tin sản phẩm</th>
                         </tr>
                     @endforelse
                 </tbody>

@@ -14,12 +14,9 @@ return new class extends Migration
         Schema::create('BDH_HOA_DON', function (Blueprint $table) {
             $table->id();
             $table->string('bdhMaHoaDon',255)->unque();
-            $table->bigInteger('bdhMaKhachHang')->references('id')->on('BDH_KHACH_HANG');
+            $table->string('bdhMaKhachHang')->references('id')->on('BDH_KHACH_HANG');
             $table->date('bdhNgayHoaDon');
             $table->string('bdhHoTenKhachHang',255);
-            $table->string('bdhEmail',255);
-            $table->string('bdhDienThoai',255);
-            $table->string('bdhDiaChi',255);
             $table->float('bdhTongGiaTri');
             $table->tinyInteger('bdhTrangThai');
             $table->timestamps();
