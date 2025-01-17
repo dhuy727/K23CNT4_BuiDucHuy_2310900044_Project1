@@ -6,6 +6,7 @@ use App\Http\Controllers\BDH_LOAI_SAN_PHAMController;
 use App\Http\Controllers\BDH_SAN_PHAMController;
 use App\Http\Controllers\BDH_Hoa_DONController;
 use App\Http\Controllers\BDH_KHACH_HANGController;
+use App\Http\Controllers\BDH_TRANG_CHUController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,3 +60,6 @@ Route::post('/bdh-admins/ndbdhk-hoa-don/bdh-create',[BDH_HOA_DONController::clas
 
 #khach hang
 Route::get('/bdh-admins/bdh-khach-hang',[BDH_KHACH_HANGController::class,'bdhList'])->name('bdhadmins.bdhkhachhang');
+
+#trang chu
+Route::get('/bdh-trang-chu', [BDH_TRANG_CHUController::class,'bdhIndex'])->name('bdhuser.trangchu');
